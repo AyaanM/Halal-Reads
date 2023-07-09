@@ -19,7 +19,7 @@ const App = () => {
       <div className={`bg-altSecondary ${styles.paddingX} ${styles.flexStart}`}>
         <div className ={`${styles.boxWidth}`}>
           <Book_Reviews />
-          <Filters />          
+          <Filters />
           <Contacts />
         </div>
       </div>
