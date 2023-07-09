@@ -1,12 +1,14 @@
 import styles from "./style"
-import {Navbar,Hero,Book_Reviews,Filters,Contacts} from "./components"
+import {Navbar,Hero,Book_Reviews,Filters,Contacts, Navbar2} from "./components"
 
 const App = () => {
-  return (
+  return ( // was too lazy to figure out the css to just make the contact us
+  // in the right spot, feel free to fix that and get rid of navbar2
     <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar />       
+          <Navbar2/> 
+          <Navbar />
         </div>
       </div>
 
