@@ -16,14 +16,19 @@ import { createClient } from "@supabase/supabase-js";
     }
 
     return (
-      <div classname="w-full flex py-6 justify-between items-center">
-      <ul>
-        {book_titles.map((book) => (
-          <li key={book.name}>{book.name}</li>
-        ))}
-      </ul>
+    <div>
+        <div className="w-full h-full bg-secondary flex py-4 px-4 rounded-xl text-altSecondary">
+          
+          <div>
+            <ul>
+              {book_titles.map((book) => (
+                <li key={book.name}>{book.name}</li>
+              ))}
+            </ul>
+          </div>
 
-      </div>
+        </div>
+    </div>
     );
   }
 

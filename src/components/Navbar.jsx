@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { close, logo, menu} from "../assets";
+import { close,menu} from "../assets";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
@@ -8,15 +8,14 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="flex py-6 justify-between items-start navbar">
-      
+    <nav className="bg-secondary w-full flex py-4 justify-between items-center navbar rounded-xl">
 
-      <ul className="list-none sm:flex hidden justify-end items-start flex-1">
+      <ul className="list-none sm:flex hidden justify-center items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-altSecondary" : "text-secondary"
+              active === nav.title ? "text-primary" : "text-altSecondary"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >

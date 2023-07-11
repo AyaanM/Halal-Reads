@@ -17,14 +17,11 @@ export const navLinks = [
     title: "Donate",
   },
   {
-    id: "requests",
-    title: "Requests",
-  }
-];
-
-export const navLinks2 = [
+    id: "lists",
+    title: "Lists",
+  },
   {
     id: "contact",
     title: "Contact Us",
   }
-]
+];
