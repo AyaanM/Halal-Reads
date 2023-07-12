@@ -1,6 +1,7 @@
 import styles from "./style"
 import {Navbar,Hero,Book_Reviews,Filters,Contacts} from "./components"
 import { logo } from "./assets"
+
 const App = () => {
   return ( 
     <div className="bg-primary w-full overflow-hidden">
@@ -11,7 +12,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className={`bg-altSecondary rounded-xl${styles.flexStart}`}>
+      <div className={`bg-textColor rounded-xl${styles.flexStart}`}>
         <div className ={`${styles.boxWidth}`}>
           <Hero/>
         </div>
