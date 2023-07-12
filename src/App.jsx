@@ -6,9 +6,9 @@ const App = () => {
   return ( 
     <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <img src={logo} alt="logo" className="w-[500px] h-[124px] py-1 px-1" />
-          <Navbar />
+        <div className={`${styles.boxWidth} flex flex-col items-center`}>
+          <img src={logo} alt="logo" className="w-[500px] h-[115px] py-1 px-1" />
+          <Navbar/>
         </div>
       </div>
 

@@ -1,16 +1,17 @@
 import { useState } from "react";
+import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai"
 
 import { close,menu} from "../assets";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false); //toggle initially false
 
   return (
-    <nav className="bg-secondary w-fit flex p-4 justify-center mx-auto items-center navbar rounded-xl">
+    <nav>
 
-      <ul className="list-none sm:flex hidden justify-center items-center flex-1">
+      <ul className="bg-secondary p-4 w-fit mx-auto navbar list-none sm:flex hidden justify-center items-center flex-1 rounded-xl">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -25,24 +26,27 @@ const Navbar = () => {
       </ul>
 
       <div className="sm:hidden flex flex-1 justify-end items-start">
-        <img
-          src={toggle ? close : menu}
-          alt="menu"
-          className="w-[28px] h-[28px] object-contain"
-          onClick={() => setToggle(!toggle)}
-        />
+        {toggle ? (
+          <AiOutlineClose className="size={20}" //if toggle true do this (everything before :)
+          onClick={() => setToggle(false)}
+          />
+          ) : ( //else if false do this (everything after :)
+          <AiOutlineMenu className="size={20}"
+          onClick={() => setToggle(true)}
+          />
+          )}
 
         <div
           className={`${
-            !toggle ? "hidden" : "flex"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+            !toggle ? "hidden" : "flex" 
+          } fixed left-0 top-20 w-fit t p-6 bg-black-gradient right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-altSecondary" : "text-secondary"
+                className={`border-b border-gray-600 font-poppins font-medium cursor-pointer text-[16px] ${
+                  active === nav.title ? "text-primary" : "text-white"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
