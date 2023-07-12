@@ -8,7 +8,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="bg-secondary w-full flex py-4 justify-between items-center navbar rounded-xl">
+    <nav className="bg-secondary w-fit flex p-4 justify-center mx-auto items-center navbar rounded-xl">
 
       <ul className="list-none sm:flex hidden justify-center items-center flex-1">
         {navLinks.map((nav, index) => (
