@@ -24,8 +24,8 @@ import { FaStar } from 'react-icons/fa';
         <div className="flex flex-col">
           <ul className="p-2">
             <li className="flex items-start">
-              <div className="border-solid border-8 border-secondary">
-                <img src={book.cover} alt="Book Cover" className="m-0" />
+              <div className="border-solid border-8 border-secondary rounded-xl">
+                <img src={book.cover} alt="Book Cover" className="m-0 rounded-2xl" />
               </div>
               <div className="ml-4 flex flex-col">
                 <span alt="title" className="text-2xl">{book.name}</span>
@@ -33,9 +33,9 @@ import { FaStar } from 'react-icons/fa';
                 <span alt="age-rating" className="block" 
                 title="Not our reccommended age rating, but where the publisher puts it at">Age Rating:  [?] {book.age_rating}</span>
                 
-                <span alt="genre" className="block">Genre: {book.genre.split(' ').join(', ')}</span>
+                <span alt="genre" className="block">Genre: {book.genre ? book.genre.split(' ').join(', ') : ''}</span>
                 <span alt="reviewer" className="block">Reviewer: {book.reviewer}</span>
-                <span alt="tags" className="block">Tags: {book.tags}</span>
+                <span alt="tags" className="block">Tags: {book.tags ? book.tags.split(' ').join(', ') : ''}</span>
               </div>
               <div className="absolute top-10 right-16 bg-primary rounded-lg p-4">
                 <div className="text-center">
@@ -46,9 +46,12 @@ import { FaStar } from 'react-icons/fa';
             </li>
             <li className="mt-4">
               <span alt="review" className="block overflow-wrap break-word">
-                {book.review}
+                {book.review.substring(0, 300)}
+                {book.review.length > 300 && <span className="text-primary text-sm">... Continue</span>// make this into a react button
+                }
               </span>
             </li>
+
             
           </ul>
         </div>
