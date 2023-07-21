@@ -1,7 +1,6 @@
 import styles from "./style"
-import {Navbar,Hero,Book_Reviews,Filters,Contacts,accountPage} from "./components"
+import {Navbar,Hero,Book_Reviews,Filters,Contacts} from "./components"
 import { logo } from "./assets"
-import Account from "./Account"// this is just a sample thing im testing with from supabase docs
 
 
 const App = () => {
