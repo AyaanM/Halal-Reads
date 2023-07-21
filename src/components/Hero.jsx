@@ -11,10 +11,10 @@ const Hero = () => {
           <ul class="w-60 h-fit py-4 px-4 bg-secondary rounded-xl">
             <div class="px-1 py-1 h-full bg-altSecondary text-1xl text-center text-secondary rounded-xl">
               Filters
-              <span class="align-text-bottom" title="Not our reccommended age rating, but where the publisher put it at">&#63;</span>
-              <div> 
-
+              <div className="align-text-bottom toolTip">&#63;
+                <span className="toolTipText">Not our reccommended age rating, but where the publisher put it at</span>
               </div>
+              <hr></hr>
             </div>
           </ul>
           <ul class="w-full bg-primary">
@@ -24,7 +24,7 @@ const Hero = () => {
           </ul>
           <ul class="w-60 h-fit py-4 px-4 bg-secondary rounded-xl ">
             <div class="px-1 py-1 h-full bg-altSecondary text-1l text-center text-secondary rounded-xl">
-              Trending
+              Trending Reviews
             </div>
             
           </ul>

@@ -138,3 +138,31 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+/* tooltip functions */
+.toolTip {
+  display: inline-block;
+  text-align: right;
+  right: 80px;
+}
+
+.toolTip .toolTipText {
+  visibility: hidden;
+  background-color: #3e5dc1;
+  width: 150px;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10%;
+  position: absolute;
+  z-index: 1 /* display on top of everything */
+}
+
+.toolTip:hover .toolTipText {
+  visibility: visible;
+}
+
+/* border */
+hr {
+  border-top: 4px solid blue;
+}

@@ -7,7 +7,7 @@ const App = () => {
   return ( 
     <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth} flex flex-col items-center`}>
+        <div className={`${styles.boxWidth} flex justify-between items-center`}>
           <img src={logo} alt="logo" className="w-[500px] h-[115px] py-1 px-1" />
           <Navbar/>
         </div>
