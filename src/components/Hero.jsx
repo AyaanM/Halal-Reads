@@ -1,5 +1,5 @@
 import useState from 'react'
-import { Book_Reviews, Filters, Navbar} from '.' // was just testing things out
+import {Book_Reviews, Filters, Navbar} from '.' // was just testing things out
 
 const Hero = () => { 
   return ( // majority of ui should go here I assume, but its up to you
@@ -14,12 +14,17 @@ const Hero = () => {
               <div className="align-text-bottom toolTip">&#63;
                 <span className="toolTipText">Not our reccommended age rating, but where the publisher put it at</span>
               </div>
-              <hr></hr>
+              <hr className='height: 20px'></hr>
             </div>
           </ul>
           <ul class="w-full bg-primary">
             <div class="py-4 px-4">
-              <Book_Reviews/>
+
+
+
+
+
+              
             </div>
           </ul>
           <ul class="w-60 h-fit py-4 px-4 bg-secondary rounded-xl ">

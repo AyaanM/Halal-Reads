@@ -164,5 +164,6 @@
 
 /* border */
 hr {
-  border-top: 4px solid blue;
+  border-width: border-x-8;
+  position: relative;
 }

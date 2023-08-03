@@ -3,6 +3,7 @@ import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai"
 
 import { close,menu} from "../assets";
 import { navLinks } from "../constants";
+import {logo} from "../assets"
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -11,21 +12,21 @@ const Navbar = () => {
   return (
     <nav>
 
-      <ul className="bg-secondary p-4 w-fit mx-auto navbar list-none sm:flex hidden justify-center items-center flex-1 rounded-xl">
+      <ul className="bg-secondary justify-center items-center p-4 h-30 w-full md:flex hidden rounded-xl">
         {navLinks.map((nav, index) => (
           <li
-            key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${
+            className={`font-poppins font-normal cursor-pointer lg:text-[16px] md:text-[15px] ${
               active === nav.title ? "text-altPrimary" : "text-altSecondary"
-            } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+            } ${index === navLinks.length - 1}`}
+            key={nav.id}
             onClick={() => setActive(nav.title)}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            <a className="px-4" href={`#${nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
 
-      <div className="sm:hidden flex flex-1 justify-end items-start">
+      <div className="md:hidden flex flex-1 justify-end items-start">
         {toggle ? (
           <AiOutlineClose className="size={20}" //if toggle true do this (everything before :)
           onClick={() => setToggle(false)}

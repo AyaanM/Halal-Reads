@@ -17,7 +17,7 @@ import { FaStar } from 'react-icons/fa';
     }
 
     return (
-      <div>
+<div>
   {books.map((book) => (
     <div key={book.name} className="w-full h-full bg-secondary flex p-4 rounded-xl text-secondary">
       <div className="w-full h-full bg-altSecondary flex p-1 rounded-xl ite relative">

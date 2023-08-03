@@ -8,17 +8,17 @@ const App = () => {
     <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth} flex justify-between items-center`}>
-          <img src={logo} alt="logo" className="w-[500px] h-[115px] py-1 px-1" />
+        <img src={logo} alt="logo" className="w-[250px] h-[115px] py-3 md:w-[300px]" />
           <Navbar/>
         </div>
       </div>
 
       <div className={`bg-textColor rounded-xl${styles.flexStart}`}>
         <div className ={`${styles.boxWidth}`}>
-        
-          <Hero/>
         </div>
       </div>
+
+      <Hero/>
       
       <div className={`h-screen bg-primary rounded-xl ${styles.paddingX} ${styles.flexStart}`}>
         <div className ={`${styles.boxWidth}`}>
