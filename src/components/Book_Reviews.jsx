@@ -19,28 +19,36 @@ import { FaStar } from 'react-icons/fa';
     return (
 <div>
   {books.map((book) => (
-    <div key={book.name} className="w-full h-full bg-secondary flex p-4 rounded-xl text-secondary">
+    <div key={book.name} className="w-full h-full bg-secondary flex p-2 rounded-xl text-secondary">
       <div className="w-full h-full bg-altSecondary flex p-1 rounded-xl ite relative">
         <div className="flex flex-col">
           <ul className="p-2">
             <li className="flex items-start">
               <div className="border-solid border-8 border-secondary rounded-xl">
-                <img src={book.cover} alt="Book Cover" className="m-0 rounded-2xl" />
+                <img src={book.cover} alt="Book Cover" className="m-0 rounded lg:h-64 md:h-48 sm:h-32 w-auto" />
               </div>
-              <div className="ml-4 flex flex-col">
-                <span alt="title" className="text-2xl">{book.name}</span>
-                <span alt="author" className="block text-xl">{book.author}</span>
-                <span alt="age-rating" className="block" 
-                title="Not our reccommended age rating, but where the publisher puts it at">Age Rating:  [?] {book.age_rating}</span>
+              <div className="ml-4 flex flex-col font-serif antialiased">
+                <span alt="title" className="text-3xl font-semibold super-antialiased">{book.name}</span>
                 
+                <span alt="author" className="block text-xl font-thin">{book.author}</span>
+
+                <span alt="age-rating" className="block">Age Rating: <div className="align-text-bottom toolTip">&#63;
+                  <span className="toolTipText">Not our reccommended age rating, but where the publisher put it at</span>
+                </div> {book.age_rating}</span>
+
                 <span alt="genre" className="block">Genre: {book.genre ? book.genre.split(' ').join(', ') : ''}</span>
                 <span alt="reviewer" className="block">Reviewer: {book.reviewer}</span>
                 <span alt="tags" className="block">Tags: {book.tags ? book.tags.split(' ').join(', ') : ''}</span>
               </div>
-              <div className="absolute top-10 right-16 bg-primary rounded-lg p-4">
+              <div className="absolute top-10 right-10 bg-primary rounded-lg p-3 text-base flex items-center">
+                <FaStar className="text-yellow-500 text-3xl pr-2" />
+                <div className="text-center mr-4 border-r-2 pr-3">
+                  <span className="font-bold underline">Our Rating</span>
+                  <span className="block text-xl">{book.rating} / 5</span>
+                </div>
                 <div className="text-center">
-                  <span className="text-lg font-bold underline">Rating</span>
-                  <span className="block text-3xl">{book.rating}<FaStar className="inline-block text-yellow-500 text-3xl ml-2" /></span>
+                  <span className="font-bold underline">Reader Rating</span>
+                  <span className="block text-xl">{book.rating} / 5</span>
                 </div>
               </div>
             </li>

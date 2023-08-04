@@ -19,12 +19,7 @@ const Hero = () => {
           </ul>
           <ul class="w-full bg-primary">
             <div class="py-4 px-4">
-
-
-
-
-
-              
+              <Book_Reviews/>
             </div>
           </ul>
           <ul class="w-60 h-fit py-4 px-4 bg-secondary rounded-xl ">
