@@ -24,26 +24,29 @@ import { FaStar } from 'react-icons/fa';
         <div className="flex flex-col">
           <ul className="p-2">
             <li className="flex items-start">
-              <div className="border-solid border-8 border-secondary rounded-xl">
-                <img src={book.cover} alt="Book Cover" className="m-0 rounded lg:h-64 md:h-48 sm:h-32 w-auto" />
+              <div className="border-solid lg:border-6 md:border-4 border-2 border-secondary rounded-xl">
+                <img src={book.cover} alt="Book Cover" className="m-0 rounded lg:h-64 md:h-48 sm:h-32 sm:w-24w-auto flex-row" />
               </div>
               <div className="ml-4 flex flex-col font-serif antialiased">
-                <span alt="title" className="text-3xl font-semibold super-antialiased">{book.name}</span>
+                <span alt="title" className="lg:text-3xl md:text-2xl sm:text-xl font-semibold super-antialiased">{book.name}</span>
                 
-                <span alt="author" className="block text-xl font-thin">{book.author}</span>
+                <span alt="author" className="block lg:text-xl md:text-lg text-base font-thin">{book.author}</span>
 
-                <span alt="age-rating" className="block">Age Rating: <div className="align-text-bottom toolTip">&#63;
-                  <span className="toolTipText">Not our reccommended age rating, but where the publisher put it at</span>
-                </div> {book.age_rating}</span>
+                <div className="lg:text-base md:text-sm text-xs">
+                  <span alt="age-rating">Age Rating <div className="align-text-bottom toolTip">&#63;
+                    <span className="toolTipText">Not our reccommended age rating, but where the publisher put it at</span>
+                  </div>: {book.age_rating}</span>
 
-                <span alt="genre" className="block">Genre: {book.genre ? book.genre.split(' ').join(', ') : ''}</span>
-                <span alt="reviewer" className="block">Reviewer: {book.reviewer}</span>
-                <span alt="tags" className="block">Tags: {book.tags ? book.tags.split(' ').join(', ') : ''}</span>
+                  <span alt="genre" className="block">Genre: {book.genre ? book.genre.split(' ').join(', ') : ''}</span>
+                  <span alt="reviewer" className="block">Reviewer: {book.reviewer}</span>
+                  <span alt="tags" className="block">Tags: {book.tags ? book.tags.split(' ').join(', ') : ''}</span>
+                </div>
               </div>
-              <div className="absolute top-10 right-10 bg-primary rounded-lg p-3 text-base flex items-center">
-                <FaStar className="text-yellow-500 text-3xl pr-2" />
-                <div className="text-center mr-4 border-r-2 pr-3">
-                  <span className="font-bold underline">Our Rating</span>
+              <div className="absolute top-10 right-10 bg-primary rounded-lg lg:text-base md:text-xs text-xs items-center p-3 sm:flex hidden">
+                <FaStar className="text-yellow-500 lg:text-3xl md:text-2xl text-xl pr-2" />
+                <div className="text-center border-r-2 px-2 lg:mr-4 md:pr-3 sm: mr-3">
+                  <span className="font-bold underline">Our Rating <div className="align-text-bottom toolTip">&#63;
+                  <span className="toolTipText">How we rate</span></div></span>
                   <span className="block text-xl">{book.rating} / 5</span>
                 </div>
                 <div className="text-center">
@@ -53,7 +56,7 @@ import { FaStar } from 'react-icons/fa';
               </div>
             </li>
             <li className="mt-4">
-              <span alt="review" className="block overflow-wrap break-word">
+              <span alt="review" className="block overflow-wrap break-word lg:text-base md:text-sm text-xs">
                 {book.review.substring(0, 300)}
                 {book.review.length > 300 && <span className="text-primary text-sm">... Continue</span>// make this into a react button
                 }
