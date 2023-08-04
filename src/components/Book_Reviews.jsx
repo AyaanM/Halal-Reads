@@ -47,11 +47,11 @@ import { FaStar } from 'react-icons/fa';
                 <div className="text-center border-r-2 px-2 lg:mr-4 md:pr-3 sm: mr-3">
                   <span className="font-bold underline">Our Rating <div className="align-text-bottom toolTip">&#63;
                   <span className="toolTipText">How we rate</span></div></span>
-                  <span className="block text-xl">{book.rating} / 5</span>
+                  <span className="block text-xl">{book.our_rating} / 5</span>
                 </div>
                 <div className="text-center">
                   <span className="font-bold underline">Reader Rating</span>
-                  <span className="block text-xl">{book.rating} / 5</span>
+                  <span className="block text-xl">{book.reader_rating} / 5</span>
                 </div>
               </div>
             </li>
